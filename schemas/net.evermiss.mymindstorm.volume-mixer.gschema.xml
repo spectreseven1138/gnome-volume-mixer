@@ -2,7 +2,7 @@
 <schemalist>
   <schema id="net.evermiss.mymindstorm.volume-mixer" path="/net/evermiss/mymindstorm/volume-mixer/">
     <key name="ignored-streams" type="as">
-      <default>["Firefox"]</default>
+      <default>["Firefox", "Firefox Developer Edition"]</default>
     </key>
     <key name="stream-name-bases" type="as">
       <default>["Loopback from Monitor of firefox_group", "Loopback from Built-in Audio Analog Stereo"]</default>
