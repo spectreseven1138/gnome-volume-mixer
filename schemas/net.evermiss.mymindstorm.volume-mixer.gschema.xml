@@ -2,13 +2,13 @@
 <schemalist>
   <schema id="net.evermiss.mymindstorm.volume-mixer" path="/net/evermiss/mymindstorm/volume-mixer/">
     <key name="ignored-streams" type="as">
-      <default>[]</default>
+      <default>["Firefox"]</default>
     </key>
     <key name="stream-name-bases" type="as">
-      <default>[]</default>
+      <default>["Loopback from Monitor of firefox_group", "Loopback from Built-in Audio Analog Stereo"]</default>
     </key>
     <key name="stream-name-replacements" type="as">
-      <default>[]</default>
+      <default>["Firefox", "Secondary device"]</default>
     </key>
     <key name="show-description" type="b">
       <default>false</default>
