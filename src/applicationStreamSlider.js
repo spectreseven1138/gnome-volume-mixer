@@ -6,7 +6,7 @@ const { BoxLayout, Label } = imports.gi.St;
 const Volume = imports.ui.status.volume;
 
 export const ApplicationStreamSlider = class extends Volume.StreamSlider {
-  constructor(stream, showDesc) {
+  constructor(stream, showDesc, menu) {
     super(Volume.getMixerControl());
 
     this.stream = stream;
@@ -15,7 +15,22 @@ export const ApplicationStreamSlider = class extends Volume.StreamSlider {
     let name = stream.get_name();
     let description = stream.get_description();
 
+    
     if (name || description) {
+      
+      if (name) {
+        let name_base = menu._streamNameBases.indexOf(name);
+        if (name_base >= 0 && name_base < menu._streamNameReplacements.length) {
+          name = menu._streamNameReplacements[name_base];
+        }
+      }
+      else {
+        let name_base = menu._streamNameBases.indexOf(description);
+        if (name_base >= 0 && name_base < menu._streamNameReplacements.length) {
+          description = menu._streamNameReplacements[name_base];
+        }
+      }
+
       this._vbox = new BoxLayout()
       this._vbox.vertical = true;
 

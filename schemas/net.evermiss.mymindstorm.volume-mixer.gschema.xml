@@ -4,6 +4,12 @@
     <key name="ignored-streams" type="as">
       <default>[]</default>
     </key>
+    <key name="stream-name-bases" type="as">
+      <default>[]</default>
+    </key>
+    <key name="stream-name-replacements" type="as">
+      <default>[]</default>
+    </key>
     <key name="show-description" type="b">
       <default>false</default>
     </key>

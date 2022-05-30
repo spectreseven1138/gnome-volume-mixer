@@ -56,7 +56,7 @@ export class VolumeMixerPopupMenuClass extends PopupMenu.PopupMenuSection {
             return;
         }
 
-        this._applicationStreams[id] = new ApplicationStreamSlider(stream, this._showStreamDesc);
+        this._applicationStreams[id] = new ApplicationStreamSlider(stream, this._showStreamDesc, this);
         this.addMenuItem(this._applicationStreams[id].item);
     }
 
@@ -74,6 +74,8 @@ export class VolumeMixerPopupMenuClass extends PopupMenu.PopupMenuSection {
         }
 
         this._ignoredStreams = this.settings.get_strv("ignored-streams");
+        this._streamNameBases = this.settings.get_strv("stream-name-bases");
+        this._streamNameReplacements = this.settings.get_strv("stream-name-replacements");
         this._showStreamDesc = this.settings.get_boolean("show-description");
 
         for (const stream of this._control.get_streams()) {
