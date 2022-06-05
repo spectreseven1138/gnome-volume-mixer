@@ -5,10 +5,10 @@
       <default>["Firefox", "Firefox Developer Edition"]</default>
     </key>
     <key name="stream-name-bases" type="as">
-      <default>["Loopback from Monitor of firefox_group", "Loopback from Built-in Audio Analog Stereo"]</default>
+      <default>["Loopback from Monitor of firefox_group", "Loopback from Monitor of firefox_dev_group", "Loopback from Built-in Audio Analog Stereo"]</default>
     </key>
     <key name="stream-name-replacements" type="as">
-      <default>["Firefox", "Secondary device"]</default>
+      <default>["Firefox", "Firefox", "Secondary device"]</default>
     </key>
     <key name="show-description" type="b">
       <default>false</default>
